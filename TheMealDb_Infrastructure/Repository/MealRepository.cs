@@ -65,10 +65,10 @@ namespace TheMealDb_Infrastructure.Repository
         {
 
             var meal = await appDbContext.Meals.FindAsync(Id);
-            if (meal.ImageName != null)
+            /*if (meal.ImageName != null)
             {
                 FileSetting.DeleteFile(meal.ImageName, "Images");
-            }
+            }*/
             if (meal == null)
             {
                 return "meal is not found";
